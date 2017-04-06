@@ -10,5 +10,9 @@ documents = (
 )
 
 # instantiate the skleanr TF-IDF vectorizer
-# and transform documents into the TF-IDF matrix
+# and transform the documents into the TF-IDF matrix
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+tfidf_vectorizer = TfidfVectorizer()
+tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
+print tfidf_matrix.shape
